@@ -73,7 +73,7 @@ if [[ "$INSTALL_QUARANTINE" =~ ^[Yy]$ ]]; then
     sudo apt install jq -y
     sudo mkdir -p /var/ossec/active-response/bin
     sudo curl -sSL -o /var/ossec/active-response/bin/quarantine-malware.sh \
-        https://raw.githubusercontent.com/bayusky/wazuh-custom-rules-and-decoders/main/active-response/quarantine-malware.sh
+        https://raw.githubusercontent.com/dhikaheinz/wazuh-custom-rules-and-decoders/main/active-response/quarantine-malware.sh
     sudo chown root:wazuh /var/ossec/active-response/bin/quarantine-malware.sh
     sudo chmod 750 /var/ossec/active-response/bin/quarantine-malware.sh
 else
