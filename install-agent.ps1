@@ -22,7 +22,7 @@ Start-Process msiexec.exe -Wait -ArgumentList "/i `"$msiPath`" /qn WAZUH_MANAGER
 $addRemoveMalware = Read-Host "Do you want to add remove-malware.exe active response? (y/n)"
 if ($addRemoveMalware -eq 'y' -or $addRemoveMalware -eq 'Y') {
     $activeResponseDir = "C:\Program Files (x86)\ossec-agent\active-response\bin"
-    $removeMalwareUrl = "https://github.com/bayusky/wazuh-custom-rules-and-decoders/raw/main/active-response/remove-malware.exe"
+    $removeMalwareUrl = "https://github.com/dhikaheinz/wazuh-custom-rules-and-decoders/raw/main/active-response/remove-malware.exe"
     $removeMalwareDest = Join-Path $activeResponseDir "remove-malware.exe"
     Write-Host "[+] Downloading remove-malware.exe to $activeResponseDir"
     Invoke-WebRequest -Uri $removeMalwareUrl -OutFile $removeMalwareDest
